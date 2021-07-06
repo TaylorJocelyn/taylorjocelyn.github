@@ -3,22 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hello world | Hexo</title>
+  <title>c++ stl(笔记篇) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="STL" />
   
   
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  
+  <meta name="description" content="最近学了STL 发现C++真香~ 第一篇博客就来记个笔记叭！   vector 向量（变长数组） 利用倍增思想实现  Hint:内存分配时间与申请次数有关而与内存大小关系不大  size()  返回元素个数  时间复杂度O(1) vector&lt;int&gt; vi; cout&lt;&lt;vi.size() ;    empty()  返回是否为空   vi.empty()    cle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://taylorjocelyn.github.io/2021/07/06/hello-world/index.html">
+<meta property="og:title" content="C++ STL(笔记篇)">
+<meta property="og:url" content="https://taylorjocelyn.github.io/2021/07/06/C-STL-%E7%AC%94%E8%AE%B0%E7%AF%87/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="最近学了STL 发现C++真香~ 第一篇博客就来记个笔记叭！   vector 向量（变长数组） 利用倍增思想实现  Hint:内存分配时间与申请次数有关而与内存大小关系不大  size()  返回元素个数  时间复杂度O(1) vector&lt;int&gt; vi; cout&lt;&lt;vi.size() ;    empty()  返回是否为空   vi.empty()    cle">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-05T16:17:34.699Z">
-<meta property="article:modified_time" content="2021-07-05T16:17:34.699Z">
+<meta property="article:published_time" content="2021-07-06T07:23:18.000Z">
+<meta property="article:modified_time" content="2021-07-06T07:24:29.919Z">
 <meta property="article:author" content="TaylorJocelyn">
+<meta property="article:tag" content="STL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -171,7 +174,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-hello-world" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-C-STL-笔记篇" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -179,7 +182,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      Hello World
+      C++ STL(笔记篇)
     </h1>
   
 
@@ -187,8 +190,8 @@
     
     <div class="article-meta">
       
-	<a href="/2021/07/06/hello-world/" class="article-date">
-	  <time datetime="2021-07-05T16:17:34.699Z" itemprop="datePublished">2021-07-06</time>
+	<a href="/2021/07/06/C-STL-%E7%AC%94%E8%AE%B0%E7%AF%87/" class="article-date">
+	  <time datetime="2021-07-06T07:23:18.000Z" itemprop="datePublished">2021-07-06</time>
 	</a>
 
       
@@ -204,19 +207,195 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <p><del><font size="4" color="#7799ee"> 最近学了STL 发现C++真香~ 第一篇博客就来记个笔记叭！</font></del></p>
+<hr>
+<ul>
+<li><p><strong><font size="4">vector</font></strong></p>
+<p>向量（变长数组） 利用倍增思想实现  Hint:内存分配时间与申请次数有关而与内存大小关系不大</p>
+<ul>
+<li><p>size()  返回元素个数  时间复杂度O(1)</p>
+<p><code>vector&lt;int&gt; vi; cout&lt;&lt;vi.size() ;</code></p>
+</li>
+</ul>
+<ul>
+<li><p>empty()  返回是否为空  </p>
+<p><code>vi.empty()</code></p>
+</li>
+</ul>
+<ul>
+<li><p>clear()  清空 时间复杂度O(N)</p>
+<p><code>vi.clear()</code></p>
+</li>
+<li><p>front()/back()  取第一个元素/取最后一个元素</p>
+</li>
+<li><p>push_back()/pop_back() 在尾部插入一个元素/弹出尾元素</p>
+</li>
+</ul>
+<ul>
+<li>begin()/end() </li>
+<li>支持随即寻址 [ ]</li>
+<li>支持比较运算，按字典序</li>
+</ul>
+</li>
+<li><p><strong><font size="4">pair</font></strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">pair</span>&#123;</span></span><br><span class="line">	typename1 first;</span><br><span class="line">	typename2 second;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>初始化</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">pair&lt;string,<span class="keyword">int</span>&gt; <span class="title">p</span><span class="params">(<span class="string">&quot;jocelyn&quot;</span>,<span class="number">5</span>)</span></span>;</span><br><span class="line"><span class="built_in">make_pair</span>(<span class="string">&quot;jocelyn&quot;</span>,<span class="number">5</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>支持比较运算，以first为第一关键字，以second为第二关键字（字典序）</p>
+</li>
+</ul>
+</li>
+<li><p><strong><font size="4">string</font></strong></p>
+<ul>
+<li><p>size()/length()  返回字符串长度</p>
+<p><code>string s; int len=s.leng();</code></p>
+</li>
+<li><p>empty()</p>
+</li>
+<li><p>clear()</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">string s=<span class="string">&quot;abcd&quot;</span>;</span><br><span class="line">s.<span class="built_in">clear</span>();</span><br><span class="line">cout&lt;&lt;str.<span class="built_in">length</span>();</span><br><span class="line"></span><br><span class="line">输出结果：</span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></table></figure></li>
+<li><p>substr(起始下标，(子串长度))  返回子串</p>
+</li>
+<li><p>c_str()  返回字符串所在字符数组的起始地址</p>
+</li>
+<li><p>erase <code>s.erase(first,last);</code>  左闭右开区间 [  )</p>
+</li>
+</ul>
+</li>
+<li><p><strong><font size="4">queue</font></strong></p>
+<ul>
+<li><p>size()</p>
+</li>
+<li><p>empty()</p>
+</li>
+<li><p>push()  向队尾插入一个元素</p>
+</li>
+<li><p>front()  返回队头元素</p>
+</li>
+<li><p>back()  返回队尾元素</p>
+</li>
+<li><p>pop()  弹出队头元素</p>
+</li>
+</ul>
+</li>
+<li><p><strong><font size="4">priority_queue</font></strong></p>
+<p><em><del>默认是大根堆</del></em></p>
+<ul>
+<li><p>push()  插入一个元素</p>
+</li>
+<li><p>top()  返回堆顶元素</p>
+</li>
+<li><p>pop()  弹出堆顶元素</p>
+</li>
+<li><p>优先级设置</p>
+<ul>
+<li>数字越大优先级越大</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="keyword">int</span>,vector&lt;<span class="keyword">int</span>&gt;,less&lt;<span class="keyword">int</span>&gt; &gt;q;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<ul>
+<li><p>数字越小优先级越大（小根堆）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;<span class="keyword">int</span>, vector&lt;<span class="keyword">int</span>&gt;, greater&lt;<span class="keyword">int</span>&gt; &gt; q;</span><br></pre></td></tr></table></figure></li>
+<li><p>结构体优先级设置</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sturct fruit&#123;</span><br><span class="line">	string name;</span><br><span class="line">	<span class="keyword">int</span> price;</span><br><span class="line">	<span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (fruit f1,fruit f2)&#123;</span><br><span class="line">		<span class="keyword">return</span> f1.price&lt;f2.price;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong><font size="4">stack</font></strong></p>
+<ul>
+<li>size()</li>
+<li>empty()</li>
+<li>push()  向栈顶插入一个元素</li>
+<li>top()  返回栈顶元素</li>
+<li>pop()  弹出栈顶元素</li>
+</ul>
+</li>
+<li><p><strong><font size="4">deque</font></strong></p>
+<p><em><del>双端队列</del></em></p>
+<ul>
+<li>size()</li>
+<li>empty()</li>
+<li>clear()</li>
+<li>front()/back()</li>
+<li>push_back()/pop_back()</li>
+<li>push_front()/pop_front()</li>
+<li>begin()/end()</li>
+<li>支持随机寻址 [ ]</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>set, map, multiset, multimap, 基于平衡二叉树（红黑树），动态维护有序序列</p>
+</blockquote>
+<ul>
+<li><p><strong><font size="4">set/multiset</font></strong></p>
+<ul>
+<li><p>insert()  插入一个数 并自动排序和去重 </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line">st.<span class="built_in">insert</span>(<span class="number">1</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>find()  查找一个数 返回一个迭代器 时间复杂度O(logN)</p>
+<p><code>cout&lt;&lt;*(st.find(1));</code></p>
+</li>
+<li><p>count()  返回某一个数的个数</p>
+</li>
+<li><p>erase()</p>
+<pre><code>(1) 输入是一个数x，删除所有x   O(k + logn)
+(2) 输入一个迭代器，删除这个迭代器
+</code></pre>
+</li>
+<li><p>lower_bound()/upper_bound()</p>
+<pre><code>lower_bound(x)  返回大于等于x的最小的数的迭代器
+upper_bound(x)  返回大于x的最小的数的迭代器
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong><font size="4">map/multimap</font></strong></p>
+<ul>
+<li><p>insert()  插入的数是一个pair</p>
+</li>
+<li><p>erase()  输入的参数是pair或者迭代器</p>
+</li>
+<li><p>find()</p>
+</li>
+<li><p>注意multimap不支持此操作  时间复杂度是 O(logn)</p>
+</li>
+<li><p>lower_bound()/upper_bound()</p>
+</li>
+</ul>
+</li>
+<li><p>**unordered_set, unordered_map, unordered_multiset, unordered_multimap, 哈希表 **</p>
+<p>1.和上面类似，增删改查的时间复杂度是 O(1)</p>
+<p>2.不支持 lower_bound()/upper_bound()， 迭代器的++，–</p>
+</li>
+<li><p><strong><font size="4">bitset</font></strong></p>
+<p><em><del>压位 占用空间为原来的1/8</del></em></p>
+<ul>
+<li><p>初始化</p>
+<p><code>bitset&lt;10000&gt; s;</code></p>
+</li>
+<li><p>支持 ~, &amp;, |, ^，&gt;, &lt;&lt;，==, !=，[ ] 等操作</p>
+</li>
+<li><p>count()  返回有多少个1</p>
+</li>
+<li><p>any()  判断是否至少有一个1</p>
+</li>
+<li><p>none()  判断是否全为0</p>
+</li>
+<li><p>set()  把所有位置成1</p>
+</li>
+<li><p>set(k, v)  将第k位变成v</p>
+</li>
+<li><p>reset()  把所有位变成0</p>
+</li>
+<li><p>flip(k)  等价于~k</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong><font color="6699cc"><del>中间记的略简洁 就先这样叭！</del></font></strong></p>
 
       
     </div>
@@ -245,7 +424,7 @@ var a = new Donate({
           </li>
           <li class="post-copyright-link">
           <strong>Post link:  </strong>
-          <a href="/2021/07/06/hello-world/" target="_blank" title="Hello World">https://TaylorJocelyn.github.io/2021/07/06/hello-world/</a>
+          <a href="/2021/07/06/C-STL-笔记篇/" target="_blank" title="C++ STL(笔记篇)">https://TaylorJocelyn.github.io/2021/07/06/C-STL-笔记篇/</a>
           </li>
           <li class="post-copyright-license">
             <strong>Copyright Notice:   </strong>
@@ -285,6 +464,8 @@ var a = new Donate({
       
       
         
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/" rel="tag">STL</a></li></ul>
+
       
 
     </footer>
@@ -293,15 +474,20 @@ var a = new Donate({
     
 <nav id="article-nav">
   
-    <a href="/2021/07/06/C-STL-%E7%AC%94%E8%AE%B0%E7%AF%87/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/07/06/Expressions/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          C++ STL(笔记篇)
+          Expressions
         
       </div>
     </a>
   
+  
+    <a href="/2021/07/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
 </nav>
 
@@ -314,7 +500,7 @@ var a = new Donate({
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav">None</ol>
     
     </div>
   </aside>
